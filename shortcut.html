@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triple Tap Shortcut – TapBudget</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #6366f1;
+      --bg: #ffffff;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --text-secondary: #475569;
+      --text-tertiary: #94a3b8;
+    }
+    body {
+      font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    
+    /* ── NAV ── */
+    nav {
+      padding: 24px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 12px;
+      font-weight: 800; font-size: 20px;
+      text-decoration: none; color: var(--text);
+    }
+    .logo-icon {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: var(--primary);
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 16px; font-weight: 800;
+    }
+    .nav-btn {
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      padding: 8px 16px; border-radius: 8px;
+      text-decoration: none; font-weight: 500; font-size: 14px;
+      display: inline-flex; align-items: center; gap: 6px;
+      transition: all 0.2s;
+    }
+    .nav-btn:hover { background: #f8fafc; color: var(--text); }
+
+    /* ── CONTAINER ── */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 100px;
+    }
+
+    /* ── HEADER ── */
+    .header { margin-bottom: 40px; }
+    .header h1 {
+      font-size: 32px; font-weight: 800; color: var(--text);
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 16px;
+    }
+    .header h1 .icon {
+      width: 40px; height: 40px; border-radius: 12px;
+      background: #eff6ff; color: var(--primary);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .header p { color: var(--text-secondary); font-size: 15px; line-height: 1.6; max-width: 600px; }
+
+    /* ── CARDS ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 24px;
+      border-bottom: 1px solid var(--border);
+      font-weight: 700; font-size: 16px; color: var(--text);
+    }
+    .card-body { padding: 24px; }
+
+    /* ── GET SHORTCUT CARD ── */
+    .import-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--primary);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600; font-size: 15px;
+      margin-bottom: 12px;
+      transition: background 0.2s;
+    }
+    .import-btn:hover { background: #4f46e5; }
+    .import-note { font-size: 13px; color: var(--text-tertiary); }
+
+    /* ── STEPS CARD ── */
+    .step-list { display: flex; flex-direction: column; }
+    .step {
+      display: flex; gap: 20px;
+      padding: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .step:last-child { border-bottom: none; }
+    .step-num {
+      width: 28px; height: 28px; border-radius: 14px;
+      background: #eff6ff; color: var(--primary);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700;
+      flex-shrink: 0;
+    }
+    .step-content h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .step-content p { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+
+    @media (max-width: 600px) {
+      nav { padding: 20px; }
+      .header h1 { font-size: 26px; }
+      .step { flex-direction: column; gap: 12px; padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">
+      <div class="logo-icon">$</div>
+      TapBudget
+    </a>
+    <a href="/" class="nav-btn">← Shortcuts</a>
+  </nav>
+
+  <div class="container">
+    
+    <div class="header">
+      <h1><div class="icon">⚡</div> Triple Tap Shortcut</h1>
+      <p>Quickly log expenses with a triple tap. Add this shortcut to your iPhone and run it to instantly log a transaction in TapBudget without opening the app.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Get the shortcut</div>
+      <div class="card-body">
+        <a href="https://www.icloud.com/shortcuts/5895faeb855e4d668fd2769b80ccbf31" target="_blank" rel="noopener noreferrer" class="import-btn">
+          ⚡ Import Shortcut
+        </a>
+        <p class="import-note">Opens iCloud Shortcuts. Open the link on your iPhone to add the shortcut.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">How to set up the Triple Tap Shortcut</div>
+      <div class="step-list">
+        
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3>Import the shortcut</h3>
+            <p>Tap the "Import Shortcut" button above to add the shortcut to your Shortcuts library.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3>Add your API Key</h3>
+            <p>On your iPhone, after clicking "Setup Shortcut" you'll see a prompt asking for your API Key. Copy and Paste the API key from your Profile page in the TapBudget app.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3>Navigate to Settings</h3>
+            <p>On your iPhone, navigate to Settings and search "Back Tap". Select "Triple Tap", scroll to the bottom, and select the imported shortcut.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
