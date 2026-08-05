@@ -107,6 +107,28 @@
     .import-btn:hover { background: #4f46e5; }
     .import-note { font-size: 13px; color: var(--text-tertiary); }
 
+    /* ── FIX BANNER ── */
+    .fix-banner {
+      background: #fefce8;
+      border: 1px solid #fde047;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .fix-banner-icon { font-size: 20px; flex-shrink: 0; }
+    .fix-banner-text { font-size: 14px; color: #713f12; line-height: 1.5; }
+    .fix-banner-text strong { font-weight: 700; display: block; margin-bottom: 4px; }
+    code {
+      background: #fde68a;
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-family: monospace;
+      font-size: 13px;
+    }
+
     /* ── STEPS CARD ── */
     .step-list { display: flex; flex-direction: column; }
     .step {
@@ -149,13 +171,21 @@
       <p>Quickly log expenses with a triple tap. Add this shortcut to your iPhone and run it to instantly log a transaction in TapBudget without opening the app.</p>
     </div>
 
+    <div class="fix-banner">
+      <div class="fix-banner-icon">⚠️</div>
+      <div class="fix-banner-text">
+        <strong>Already set up? Getting "Network connection was lost"?</strong>
+        Your shortcut has the old header name. Fix it by changing the header from <code>api key</code> to <code>x-api-key</code> in the shortcut's "Get Contents of URL" action. Or just re-download the shortcut below.
+      </div>
+    </div>
+
     <div class="card">
       <div class="card-header">Get the shortcut</div>
       <div class="card-body">
-        <a href="https://www.icloud.com/shortcuts/7a1234cfae834714bdb269a01076ba3f" target="_blank" rel="noopener noreferrer" class="import-btn">
-          ⚡ Import Shortcut
+        <a href="/tapbudget-shortcut.shortcut" class="import-btn">
+          ⚡ Download Shortcut
         </a>
-        <p class="import-note">Opens iCloud Shortcuts. Open the link on your iPhone to add the shortcut.</p>
+        <p class="import-note">Open this link on your iPhone to add the shortcut. Updated August 2026.</p>
       </div>
     </div>
 
